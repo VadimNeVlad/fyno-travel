@@ -1,0 +1,47 @@
+@import "../../utils/styles/_variables.scss";
+
+.tripInfoHighlights {
+  &__titleContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__infoHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+
+  strong {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+  }
+
+  span {
+    font-size: 15px;
+    line-height: 21px;
+    letter-spacing: -0.2px;
+    color: $text-color-gray;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.41px;
+  }
+}

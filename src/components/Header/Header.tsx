@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     <div className={styles.header}>
       <TripDropdown />
       <Link to="/">
-        <Button>
+        <Button mdRadiusBorder>
           <img src="/plus-small.svg" alt="plus-small" /> Create
         </Button>
       </Link>

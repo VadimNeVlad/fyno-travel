@@ -16,6 +16,14 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
 .tripDropdownSelect__control {
   border: none !important;
   letter-spacing: -0.1px;

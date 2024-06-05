@@ -6,4 +6,5 @@ export interface ButtonProps {
   children: React.ReactNode;
   isBlur?: boolean;
   basic?: boolean;
+  mdRadiusBorder?: boolean;
 }
