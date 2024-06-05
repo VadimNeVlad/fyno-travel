@@ -7,4 +7,9 @@ export interface ButtonProps {
   isBlur?: boolean;
   basic?: boolean;
   mdRadiusBorder?: boolean;
+  transparent?: boolean;
+}
+
+export interface RegionHighlightsItemProps {
+  reviewType?: boolean;
 }

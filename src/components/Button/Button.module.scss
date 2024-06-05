@@ -43,4 +43,11 @@
   &.mdRadiusBorder {
     border-radius: $border-radius-primary;
   }
+
+  &.transparent {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 }

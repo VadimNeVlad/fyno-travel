@@ -32,6 +32,23 @@ h3 {
   letter-spacing: -0.35px;
 }
 
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.38px;
+  margin: 0;
+  padding-bottom: 7px;
+}
+
+h5 {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: -0.41px;
+  margin: 0;
+}
+
 .tripDropdownSelect__control {
   border: none !important;
   letter-spacing: -0.1px;

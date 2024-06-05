@@ -7,12 +7,15 @@ const Button: React.FC<ButtonProps> = ({
   isBlur,
   basic,
   mdRadiusBorder,
+  transparent,
 }) => {
   return (
     <button
-      className={`${styles.btn} ${isBlur && styles.blur} ${
-        basic && styles.basic
-      } ${mdRadiusBorder && styles.mdRadiusBorder}`}
+      className={`${styles.btn} ${isBlur ? styles.blur : ""} ${
+        basic ? styles.basic : ""
+      } ${mdRadiusBorder ? styles.mdRadiusBorder : ""} ${
+        transparent ? styles.transparent : ""
+      }`}
     >
       {children}
     </button>

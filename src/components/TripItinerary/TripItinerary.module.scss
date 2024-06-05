@@ -1,6 +1,8 @@
 @import "../../utils/styles/_variables.scss";
 
 .tripItinerary {
+  padding-bottom: 42px;
+
   &__content {
     display: flex;
     justify-content: space-between;
