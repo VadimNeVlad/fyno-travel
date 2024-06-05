@@ -34,4 +34,9 @@
       margin-right: 1px;
     }
   }
+
+  &.basic {
+    border-color: transparent;
+    color: $secondary-color;
+  }
 }

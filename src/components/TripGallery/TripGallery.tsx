@@ -19,7 +19,7 @@ const TripGallery: React.FC = () => {
           <img src="/trip-info-4.jpg" alt="trip-photo-4" />
         </div>
         <div>
-          <img src="/trip-info-5.jpg" alt="trip-photo-5" />
+          <img src="/trip-info-1.jpg" alt="trip-photo-5" />
         </div>
       </div>
       <div className={styles.tripGallery__btnWrap}>

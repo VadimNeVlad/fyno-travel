@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4px;
+  margin-bottom: 28px;
 
   &__left {
     border-top-left-radius: $border-radius-bigger;
