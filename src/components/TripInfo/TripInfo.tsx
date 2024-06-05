@@ -14,50 +14,6 @@ const TripInfo: React.FC = () => {
       <TripGallery />
       <TripDescription />
       <TripInfoHighlights />
-      {/* <Swiper
-        slidesPerView={3}
-        spaceBetween={16}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div
-            style={{
-              backgroundColor: "red",
-              width: "216px",
-              height: "300px",
-            }}
-          >
-            slide 1
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            style={{ backgroundColor: "red", width: "216px", height: "300px" }}
-          >
-            slide 2
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            style={{ backgroundColor: "red", width: "216px", height: "300px" }}
-          >
-            slide 3
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            style={{ backgroundColor: "red", width: "216px", height: "300px" }}
-          >
-            slide 4
-          </div>
-        </SwiperSlide>
-      </Swiper> */}
     </div>
   );
 };

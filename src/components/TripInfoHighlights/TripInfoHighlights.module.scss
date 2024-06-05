@@ -1,6 +1,8 @@
 @import "../../utils/styles/_variables.scss";
 
 .tripInfoHighlights {
+  padding-bottom: 15px;
+
   &__titleContent {
     display: flex;
     justify-content: space-between;
@@ -10,6 +12,7 @@
   &__btns {
     display: flex;
     gap: 10px;
+    height: 32px;
   }
 
   &__infoHeader {
