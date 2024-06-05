@@ -4,4 +4,5 @@ export interface ContainerProps {
 
 export interface ButtonProps {
   children: React.ReactNode;
+  isBlur?: boolean;
 }

@@ -1,0 +1,35 @@
+@import "../../utils/styles/_variables.scss";
+
+.tripGallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+
+  &__left {
+    border-top-left-radius: $border-radius-bigger;
+    border-bottom-left-radius: $border-radius-bigger;
+    overflow: hidden;
+  }
+
+  &__right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    border-top-right-radius: $border-radius-bigger;
+    border-bottom-right-radius: $border-radius-bigger;
+    overflow: hidden;
+  }
+
+  &__btnWrap {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

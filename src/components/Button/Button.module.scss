@@ -21,4 +21,17 @@
   img {
     margin-right: 4px;
   }
+
+  &.blur {
+    border-radius: $border-radius-huge;
+    background: rgba(136, 136, 136, 0.3);
+    backdrop-filter: blur(12px);
+    border-color: transparent;
+    color: #fff;
+
+    img {
+      width: 32px;
+      margin-right: 1px;
+    }
+  }
 }
