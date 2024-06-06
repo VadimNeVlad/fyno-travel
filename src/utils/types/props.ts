@@ -1,3 +1,5 @@
+import { Region, RegionHighlightsItem } from "./region";
+
 export interface ContainerProps {
   children: React.ReactNode;
 }
@@ -11,5 +13,10 @@ export interface ButtonProps {
 }
 
 export interface RegionHighlightsItemProps {
-  reviewType?: boolean;
+  list: RegionHighlightsItem[];
+  isReviewType?: boolean;
+}
+
+export interface RegionItemProps {
+  region: Region;
 }
