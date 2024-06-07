@@ -3,14 +3,18 @@
 
 .dayPlanItem {
   position: relative;
-  padding-left: 68px;
+  padding-left: 35px;
   padding-top: 18px;
+
+  @include breakpoint(sm) {
+    padding-left: 48px;
+  }
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 36px;
+    left: 13px;
     width: 2px;
     height: 100%;
     background-color: rgba(60, 60, 67, 0.18);
@@ -26,9 +30,17 @@
 
   &__titleContent {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 15px;
     padding-bottom: 15px;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+    }
 
     button {
       height: 32px;
@@ -37,7 +49,12 @@
 
   &__titleContentItem {
     position: absolute;
-    left: 23px;
+    left: 0px;
+    top: -2px;
+
+    @include breakpoint(sm) {
+      top: 2px;
+    }
   }
 
   &__contentHeader {
@@ -84,35 +101,59 @@
   &__contentMain {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 24px;
 
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
+
     &::before {
       content: "";
       position: absolute;
-      left: -35px;
+      left: -25px;
+      top: 102px;
       width: 4px;
       height: 4px;
       background-color: $background-color-gray;
       border-radius: 50%;
       border: 2px solid #fff;
+
+      @include breakpoint(sm) {
+        left: -38px;
+        top: 62px;
+      }
     }
   }
 
   &__contentMainItem {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 24px;
     max-width: 556px;
     width: 100%;
+    order: 2;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      order: 1;
+    }
   }
 
   &__contentMainImg {
-    width: 96px;
+    max-width: 296px;
+    width: 100%;
     height: 132px;
     border-radius: 12px;
     overflow: hidden;
+
+    @include breakpoint(sm) {
+      width: 96px;
+      max-width: none;
+    }
 
     img {
       width: 100%;
@@ -143,6 +184,7 @@
 
   &__contentMainAbout {
     display: flex;
+    flex-wrap: wrap;
     gap: 13px;
 
     span {
@@ -157,5 +199,28 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    order: 1;
+
+    @include breakpoint(sm) {
+      width: auto;
+      justify-content: start;
+      padding-bottom: 0;
+      order: 2;
+    }
+
+    img {
+      min-width: 32px;
+    }
+  }
+
+  &__contentMainInfo {
+    text-align: center;
+
+    @include breakpoint(sm) {
+      text-align: left;
+    }
   }
 }
