@@ -58,19 +58,22 @@
     padding-top: 5px;
 
     span {
+      position: relative;
       font-size: 15px;
       line-height: 21px;
       letter-spacing: -0.2px;
       color: $text-color-gray;
 
-      &:last-child {
-        position: relative;
+      &::before {
+        content: "·";
+        position: absolute;
+        right: -9px;
+        top: 0;
+      }
 
+      &:last-child {
         &::before {
-          content: "·";
-          position: absolute;
-          left: -9px;
-          top: 0;
+          display: none;
         }
       }
     }

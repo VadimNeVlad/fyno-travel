@@ -188,10 +188,24 @@
     gap: 13px;
 
     span {
+      position: relative;
       font-size: 15px;
       line-height: 21px;
       letter-spacing: -0.2px;
       color: rgba(60, 60, 67, 0.8);
+
+      &::before {
+        content: "·";
+        position: absolute;
+        right: -9px;
+        top: 0;
+      }
+
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
     }
   }
 
