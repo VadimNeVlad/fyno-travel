@@ -38,6 +38,10 @@
   &.basic {
     border-color: transparent;
     color: $secondary-color;
+
+    img {
+      margin-right: 0;
+    }
   }
 
   &.mdRadiusBorder {

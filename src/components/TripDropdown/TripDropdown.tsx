@@ -16,13 +16,13 @@ const TripDropdowm: React.FC = () => {
 
   return (
     <div className={styles.tripDropdown}>
-      <div className="trip-dropdown__item">
+      <div className={styles.tripDropdown__item}>
         <p>Trips</p>
       </div>
-      <div className="trip-dropdown__item">
+      <div className={styles.tripDropdown__item}>
         <p>Iceland</p>
       </div>
-      <div className="trip-dropdown__item">
+      <div className={styles.tripDropdown__item}>
         <Select
           classNamePrefix="tripDropdownSelect"
           defaultValue={selectedOption}

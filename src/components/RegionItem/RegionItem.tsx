@@ -3,6 +3,7 @@ import style from "./RegionItem.module.scss";
 import Button from "../Button/Button";
 import RegionHighlightsItem from "../RegionHighlightsItem/RegionHighlightsItem";
 import { RegionItemProps } from "../../utils/types/props";
+import { Link } from "react-router-dom";
 
 const RegionItem: React.FC<RegionItemProps> = ({ region }) => {
   return (
@@ -31,9 +32,11 @@ const RegionItem: React.FC<RegionItemProps> = ({ region }) => {
             <img src="/dot.svg" alt="dot" />
           </div>
           <h5>Region highlights</h5>
-          <Button>
-            <img src="/daily-plan.svg" alt="daily-plan" /> Show daily plan
-          </Button>
+          <Link to={`/highlights/${region.id}`}>
+            <Button>
+              <img src="/daily-plan.svg" alt="daily-plan" /> Show daily plan
+            </Button>
+          </Link>
         </div>
         <RegionHighlightsItem list={region.regionHighlights} />
         <div className={style.regionItem__stayInfo}>
