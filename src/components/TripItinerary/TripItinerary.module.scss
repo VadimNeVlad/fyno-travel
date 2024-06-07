@@ -1,16 +1,26 @@
 @import "../../utils/styles/_variables.scss";
+@import "../../utils/styles/_mixins.scss";
 
 .tripItinerary {
   padding-bottom: 42px;
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 16px;
     background-color: $background-color-secondary;
     box-shadow: 0px 0px 0px 0.5px #ccd7f1, 0px 2px 3px rgba(220, 227, 246, 0.5);
     border-radius: $border-radius-primary;
-    padding: 24px;
+    padding: 16px;
+
+    @include breakpoint(sm) {
+      padding: 24px;
+    }
+
+    @include breakpoint(md) {
+      flex-wrap: nowrap;
+    }
 
     span {
       font-size: 15px;
@@ -24,7 +34,7 @@
     box-sizing: border-box;
     width: 100%;
     background-color: #fff;
-    padding: 9px 16px;
+    padding: 9.5px 16px;
     box-shadow: 0px 0px 0px 0.5px rgba(151, 151, 151, 0.3);
     border-radius: $border-radius-small;
 
@@ -36,35 +46,58 @@
 
   &__flights {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 398px;
     width: 100%;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
+
+    @include breakpoint(md) {
+      max-width: 398px;
+    }
 
     img {
       max-width: 32px;
+      transform: rotate(90deg);
+
+      @include breakpoint(sm) {
+        transform: rotate(0deg);
+      }
     }
   }
 
   &__flight {
-    max-width: 179px;
+    width: 100%;
+
+    @include breakpoint(md) {
+      max-width: 179px;
+    }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
-    max-width: 244px;
     width: 100%;
     gap: 16px;
+
+    @include breakpoint(md) {
+      max-width: 244px;
+    }
   }
 
   &__infoDates {
     display: flex;
     align-items: center;
     padding-left: 5px;
-    max-width: 157px;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+    @include breakpoint(md) {
+      max-width: 157px;
+    }
   }
 
   &__infoAmount {
@@ -72,7 +105,7 @@
     align-items: center;
     padding-left: 5px;
     max-width: 70px;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-bottom: 4px;
+    padding-top: 4px;
   }
 }

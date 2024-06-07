@@ -1,11 +1,21 @@
 @import "../../utils/styles/_variables.scss";
+@import "../../utils/styles/_mixins.scss";
 
 .regionItem {
   position: relative;
+  padding-bottom: 20px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 
   &__wrap {
     position: relative;
-    padding-left: 48px;
+    padding-left: 35px;
+
+    @include breakpoint(sm) {
+      padding-left: 48px;
+    }
 
     &::before {
       content: "";
@@ -75,10 +85,18 @@
 
   &__highlightsHeader {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 24px;
     margin-top: 33px;
+    gap: 15px;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+    }
   }
 
   &__stayInfo {
@@ -86,6 +104,10 @@
   }
 
   &__stayContentWrap {
-    padding-left: 48px;
+    padding-left: 35px;
+
+    @include breakpoint(sm) {
+      padding-left: 48px;
+    }
   }
 }

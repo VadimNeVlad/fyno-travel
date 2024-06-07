@@ -12,6 +12,10 @@ export interface ButtonProps {
   transparent?: boolean;
 }
 
+export interface RegionListProps {
+  elRef: React.MutableRefObject<HTMLInputElement | null>;
+}
+
 export interface RegionHighlightsItemProps {
   list: RegionHighlightsItem[];
   isReviewType?: boolean;
@@ -19,4 +23,8 @@ export interface RegionHighlightsItemProps {
 
 export interface RegionItemProps {
   region: Region;
+}
+
+export interface TripDescriptionProps {
+  elRef: React.MutableRefObject<HTMLInputElement | null>;
 }

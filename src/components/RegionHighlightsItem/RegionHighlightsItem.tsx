@@ -5,6 +5,9 @@ import { Swiper as SwiperType } from "swiper";
 import styles from "./RegionHighlightsItem.module.scss";
 import Button from "../Button/Button";
 import { RegionHighlightsItemProps } from "../../utils/types/props";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const RegionHighlightsItem: React.FC<RegionHighlightsItemProps> = ({
   list,

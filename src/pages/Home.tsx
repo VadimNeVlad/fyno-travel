@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../components/Header/Header";
 import Container from "../components/Container/Container";
-import TripInfo from "../components/TripInfo/TripInfo";
 import TripItinerary from "../components/TripItinerary/TripItinerary";
 import RegionList from "../components/RegionList/RegionList";
+import TripGallery from "../components/TripGallery/TripGallery";
+import TripDescription from "../components/TripDescription/TripDescription";
+import TripInfoHighlights from "../components/TripInfoHighlights/TripInfoHighlights";
 
 const Home: React.FC = () => {
+  const ref = useRef(null);
+
   return (
     <Container>
       <Header />
-      <TripInfo />
+      <TripGallery />
+      <TripDescription elRef={ref} />
+      <TripInfoHighlights />
       <TripItinerary />
-      <RegionList />
+      <div ref={ref}>
+        <RegionList />
+      </div>
     </Container>
   );
 };

@@ -78,3 +78,7 @@ h5 {
 .tripDropdownSelect__indicator-separator {
   display: none;
 }
+
+.tripDropdownSelect__option--is-selected {
+  background-color: #714eff !important;
+}

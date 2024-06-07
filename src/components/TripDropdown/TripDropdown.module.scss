@@ -1,10 +1,16 @@
 @import "../../utils/styles/_variables.scss";
+@import "../../utils/styles/_mixins.scss";
 
 .tripDropdown {
   display: flex;
   align-items: center;
   border: 1px solid $border-color-primary;
   border-radius: $border-radius-primary;
+  margin-top: 20px;
+
+  @include breakpoint(sm) {
+    margin-top: 0;
+  }
 
   p {
     margin: 0;

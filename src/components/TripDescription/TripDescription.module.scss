@@ -1,20 +1,53 @@
 @import "../../utils/styles/_variables.scss";
+@import "../../utils/styles/_mixins.scss";
 
 .tripDescription {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border: 1px solid $border-color-primary;
   border-radius: $border-radius-primary;
-  padding: 24px;
-  margin-bottom: 45px;
+  padding: 16px;
+  margin-bottom: 25px;
+
+  @include breakpoint(sm) {
+    margin-bottom: 45px;
+    padding: 24px;
+  }
+
+  @include breakpoint(md) {
+    flex-direction: row;
+  }
 
   &__content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 450px;
     width: 100%;
-    margin-right: 15px;
+    margin-bottom: 15px;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
+
+    @include breakpoint(md) {
+      max-width: 450px;
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    padding-bottom: 15px;
+
+    @include breakpoint(sm) {
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   h4 {

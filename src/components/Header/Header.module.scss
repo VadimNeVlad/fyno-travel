@@ -1,8 +1,15 @@
+@import "../../utils/styles/_mixins.scss";
+
 .header {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+  }
 
   button img {
     margin-right: 4px;

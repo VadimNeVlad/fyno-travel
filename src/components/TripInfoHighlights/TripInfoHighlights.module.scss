@@ -1,12 +1,25 @@
 @import "../../utils/styles/_variables.scss";
+@import "../../utils/styles/_mixins.scss";
 
 .tripInfoHighlights {
-  padding-bottom: 15px;
+  padding-bottom: 1px;
+
+  @include breakpoint(sm) {
+    padding-bottom: 15px;
+  }
 
   &__titleContent {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 0;
+    }
   }
 
   &__btns {
